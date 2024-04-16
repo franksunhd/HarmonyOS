@@ -8,6 +8,9 @@
     "pages/FlexPage",
     "pages/demo/HotAndQuestion",
     "pages/RelativeContainerPage",
-    "pages/demo/RelativePosition"
+    "pages/demo/RelativePosition",
+    "pages/ListPage",
+    "pages/demo/WxListPage",
+    "pages/demo/ArticleListPage"
   ]
 }
