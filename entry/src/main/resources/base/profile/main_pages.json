@@ -3,8 +3,8 @@
     "pages/Index",
     "pages/ArrayPage",
     "pages/Layout",
-    "pages/layoutWeight",
-    "pages/stackPage",
+    "pages/LayoutWeight",
+    "pages/StackPage",
     "pages/FlexPage",
     "pages/demo/HotAndQuestion",
     "pages/RelativeContainerPage",
@@ -12,6 +12,7 @@
     "pages/ListPage",
     "pages/demo/WxListPage",
     "pages/demo/ArticleListPage",
-    "pages/listScrollerPage"
+    "pages/ListScrollerPage",
+    "pages/ListGroupPage"
   ]
 }

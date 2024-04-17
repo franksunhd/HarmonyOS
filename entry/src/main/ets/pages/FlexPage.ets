@@ -1,5 +1,4 @@
-import { publicContainer } from "./components/publicContainer";
-import { layoutContainer } from "./components/layoutContainer";
+import { publicContainer } from "./components/PublicContainer";
 
 @Entry
 @Component
