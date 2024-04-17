@@ -11,6 +11,7 @@
     "pages/demo/RelativePosition",
     "pages/ListPage",
     "pages/demo/WxListPage",
-    "pages/demo/ArticleListPage"
+    "pages/demo/ArticleListPage",
+    "pages/listScrollerPage"
   ]
 }
