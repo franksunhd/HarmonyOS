@@ -1,3 +1,5 @@
+import router from '@ohos.router';
+
 interface WxListInterFace {
 	title: string,
 	img: string
@@ -86,6 +88,15 @@ struct WxListPage {
 				}.width("100%").backgroundColor("#fff")
 
 			}
+
+			Button() {
+				Text("返回").fontSize(20)
+					.fontColor(Color.White)
+					.padding({ top: 6, bottom: 6, left: 14, right: 14 })
+					.onClick(() => {
+						router.back();
+					})
+			}.margin({ top: 20 })
 		}.width('100%').height('100%').backgroundColor("#eee")
 	}
 }

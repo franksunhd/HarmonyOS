@@ -1,5 +1,6 @@
 // 模型类约束数组
 import { Article } from "../model/Article";
+import router from '@ohos.router';
 
 @Entry
 @Component
@@ -48,6 +49,15 @@ struct ArticleListPage {
 				strokeWidth: 1,
 				color: "#eee"
 			})
+
+			Button() {
+				Text("返回").fontSize(20)
+					.fontColor(Color.White)
+					.padding({ top: 6, bottom: 6, left: 14, right: 14 })
+					.onClick(() => {
+						router.back();
+					})
+			}.margin({ top: 20 })
 		}
 		.width('100%')
 		.height('100%')
