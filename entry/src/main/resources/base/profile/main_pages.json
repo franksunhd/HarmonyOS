@@ -13,6 +13,7 @@
     "pages/demo/WxListPage",
     "pages/demo/ArticleListPage",
     "pages/ListScrollerPage",
-    "pages/ListGroupPage"
+    "pages/ListGroupPage",
+    "pages/GridPage"
   ]
 }
