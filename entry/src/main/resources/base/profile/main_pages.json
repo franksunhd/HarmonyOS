@@ -14,6 +14,7 @@
     "pages/demo/ArticleListPage",
     "pages/ListScrollerPage",
     "pages/ListGroupPage",
-    "pages/GridPage"
+    "pages/GridPage",
+    "pages/TabsPage"
   ]
 }
