@@ -16,19 +16,32 @@ struct WxListPage {
 		{ title: "卡包", img: "https://www.itying.com/images/listimg/icon/05.jpg" },
 		{ title: "表情", img: "https://www.itying.com/images/listimg/icon/06.jpg" },
 		{ title: "设置", img: "https://www.itying.com/images/listimg/icon/07.jpg" },
-	]
+	];
+	private title: string;
+	private age: number;
+
+	aboutToAppear() {
+		let obj = router.getParams();
+		this.title = obj["title"];
+		this.age = obj["age"];
+		console.warn(obj["title"], obj["age"]);
+	}
 
 	build() {
 		Column() {
 			List({ space: 10 }) {
 				// 用户头像区域
 				ListItem() {
-					Text("头像区域")
-						.fontSize(26)
-						.width("100%")
-						.height(160)
-						.backgroundColor(Color.Orange)
-						.textAlign(TextAlign.Center)
+					Column() {
+						Text("头像区域")
+							.fontSize(26)
+							.width("100%")
+							.height(160)
+							.backgroundColor(Color.Orange)
+							.textAlign(TextAlign.Center)
+						Text(`title=${this.title}, age=${this.age}`)
+							.fontSize(30)
+					}
 				}
 
 				// 服务
@@ -94,9 +107,40 @@ struct WxListPage {
 					.fontColor(Color.White)
 					.padding({ top: 6, bottom: 6, left: 14, right: 14 })
 					.onClick(() => {
+						router.showAlertBeforeBackPage({
+							message: "您确定需要返回吗？"
+						});
+						let state = router.getState();
+						console.warn(state.index.toString(), state.name, state.path);
 						router.back();
 					})
 			}.margin({ top: 20 })
+
+			Button() {
+				Text("重定向跳转文章").fontSize(20)
+					.fontColor(Color.White)
+					.padding({ top: 6, bottom: 6, left: 14, right: 14 })
+					.onClick(() => {
+						router.replaceUrl({
+							url: "pages/demo/ArticleListPage"
+						});
+					})
+			}.margin({ top: 20 })
+			.type(ButtonType.Normal)
+			.backgroundColor(Color.Green)
+
+			Button() {
+				Text("返回根页面").fontSize(20)
+					.fontColor(Color.White)
+					.padding({ top: 6, bottom: 6, left: 14, right: 14 })
+					.onClick(() => {
+						router.back({
+							url: "pages/RouterPage"
+						});
+					})
+			}.margin({ top: 20 })
+			.type(ButtonType.Normal)
+			.backgroundColor(Color.Orange)
 		}.width('100%').height('100%').backgroundColor("#eee")
 	}
 }
