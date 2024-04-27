@@ -1,4 +1,5 @@
 // 数字类型 (全局变量-组件中使用时不再需要使用this)
+import router from '@ohos.router';
 let num_1: number = 123; // 整型--十进制
 let num_2: number = 12.3; // 浮点型
 let num_3: number = 0x1f; // 十六进制
@@ -81,6 +82,12 @@ struct Index {
 				Divider(); // 分割线
 				Text(`使用枚举类型访问颜色是${content}`)
 					.fontSize(20).margin(10).fontColor(content);
+
+				Button("输入框").margin(10).onClick(() => {
+					router.pushUrl({
+						url: "pages/TextInputPage"
+					})
+				});
 			}.width("100%")
 		}.height("100%")
 	}

@@ -18,6 +18,7 @@
     "pages/TabsPage",
     "pages/RouterPage",
     "pages/ImagePage",
-    "pages/SwiperPage"
+    "pages/SwiperPage",
+    "pages/TextInputPage"
   ]
 }
