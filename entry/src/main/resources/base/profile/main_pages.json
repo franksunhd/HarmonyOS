@@ -16,6 +16,8 @@
     "pages/ListGroupPage",
     "pages/GridPage",
     "pages/TabsPage",
-    "pages/RouterPage"
+    "pages/RouterPage",
+    "pages/ImagePage",
+    "pages/SwiperPage"
   ]
 }
