@@ -19,6 +19,7 @@
     "pages/RouterPage",
     "pages/ImagePage",
     "pages/SwiperPage",
-    "pages/TextInputPage"
+    "pages/TextInputPage",
+    "pages/FormPage"
   ]
 }
