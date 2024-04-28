@@ -20,6 +20,7 @@
     "pages/ImagePage",
     "pages/SwiperPage",
     "pages/TextInputPage",
-    "pages/FormPage"
+    "pages/FormPage",
+    "pages/DatePickerPage"
   ]
 }
