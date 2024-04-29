@@ -59,7 +59,7 @@ struct ListScrollerPage {
 				.margin({ right: 20 })
 				.onClick(() => {
 					// 1、按下标滚动
-					// this.scroller.scrollToIndex(0);
+					this.scroller.scrollToIndex(0);
 
 					// 2、按照水平和垂直距离滚动,可以添加动画时长(滑动指定位置)
 					// this.scroller.scrollTo({
@@ -75,7 +75,7 @@ struct ListScrollerPage {
 					// this.scroller.scrollEdge(Edge.Bottom);
 
 					// 4、横向和纵向的滚动距离(滑动指定的距离)
-					this.scroller.scrollBy(0, 100);
+					// this.scroller.scrollBy(0, 100);
 				})
 			}
 		}
