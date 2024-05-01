@@ -34,12 +34,18 @@ struct Index {
 			]
 		},
 		{
+			title: "UI界面(API)",
+			children: [
+				{ title: "页面路由(router)", pathName: "pages/UIApi/RouterPage" },
+				{ title: "弹窗(promptAction)", pathName: "pages/UIApi/PromptActionPage" },
+			]
+		},
+		{
 			title: "其他",
 			children: [
 				{ title: "数据类型", pathName: "pages/OtherPage/DataPage" },
 				{ title: "自定义组件", pathName: "pages/OtherPage/LayoutPage" },
 				{ title: "layoutWeight", pathName: "pages/OtherPage/LayoutWeight" },
-				{ title: "路由模式", pathName: "pages/OtherPage/RouterPage" },
 			]
 		}
 	];
