@@ -42,6 +42,8 @@ struct Index {
 			children: [
 				{ title: "页面路由(router)", pathName: "pages/UIApi/RouterPage" },
 				{ title: "弹窗(promptAction)", pathName: "pages/UIApi/PromptActionPage" },
+				{ title: "状态管理(@State/@Prop/@Link/@Provide/@Consume)", pathName: "pages/UIApi/StatusPage" },
+				{ title: "watch监听(@Watch)", pathName: "pages/UIApi/WatchPage" },
 			]
 		},
 		{
