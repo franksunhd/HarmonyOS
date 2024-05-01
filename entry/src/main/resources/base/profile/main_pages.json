@@ -27,6 +27,8 @@
     "pages/BaseComponent/QrCodePage",
     "pages/BaseComponent/PatternLockPage",
     "pages/BaseComponent/TogglePage",
-    "pages/BaseComponent/RatingPage"
+    "pages/BaseComponent/RatingPage",
+    "pages/UIApi/StatusPage",
+    "pages/UIApi/WatchPage"
   ]
 }
