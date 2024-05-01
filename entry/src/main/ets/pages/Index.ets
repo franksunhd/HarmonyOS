@@ -9,6 +9,7 @@ interface menuItem {
 @Entry // @Entry 装饰器 表示把 当前组件 定义为 当前页面 的入口组件
 @Component // @Component 装饰器 表示 自定义组件的装饰器
 struct Index {
+	@State colorList: Color[] = [Color.Brown, Color.Green, Color.Red, Color.Gray, Color.Blue, Color.Pink, Color.Orange, Color.Yellow];
 	@State menuList: menuItem[] = [
 		{
 			title: "基础组件",
@@ -76,7 +77,8 @@ struct Index {
 								ForEach(item.children, (val: menuItem, i: number) => {
 									Text(val.title)
 										.fontSize(16)
-										.fontColor(Color.Blue)
+										.fontColor(i <= this.colorList.length - 1 ? this.colorList[i] : this.colorList[i - this.colorList.length - 1])
+										.fontWeight(FontWeight.Bold)
 										.padding({ right: 10, bottom: 5 })
 										.onClick(() => {
 											router.pushUrl({
