@@ -25,6 +25,8 @@
     "pages/OtherPage/DataPage",
     "pages/UIApi/PromptActionPage",
     "pages/BaseComponent/QrCodePage",
-    "pages/BaseComponent/PatternLockPage"
+    "pages/BaseComponent/PatternLockPage",
+    "pages/BaseComponent/TogglePage",
+    "pages/BaseComponent/RatingPage"
   ]
 }

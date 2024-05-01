@@ -16,7 +16,11 @@ struct Index {
 				{ title: "日期组件(datePicker)", pathName: "pages/BaseComponent/DatePickerPage" },
 				{ title: "表单组件(radio/checkBox)", pathName: "pages/BaseComponent/DatePickerPage" },
 				{ title: "图片组件(Image)", pathName: "pages/BaseComponent/ImagePage" },
-				{ title: "输入框组件(textInput/textArea)", pathName: "pages/BaseComponent/TextInputPage" },
+				{ title: "输入框组件(textInput/textArea/Search)", pathName: "pages/BaseComponent/TextInputPage" },
+				{ title: "二维码(qrcode)", pathName: "pages/BaseComponent/QrCodePage" },
+				{ title: "锁屏密码(patternLock)", pathName: "pages/BaseComponent/PatternLockPage" },
+				{ title: "开关组件(Toggle)", pathName: "pages/BaseComponent/TogglePage" },
+				{ title: "评分组件(Rating)", pathName: "pages/BaseComponent/RatingPage" },
 			]
 		},
 		{

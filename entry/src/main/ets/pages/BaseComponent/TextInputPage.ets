@@ -2,7 +2,8 @@
 @Component
 struct TextInputPage {
 	@State message: string = 'Hello World'
-	textController: TextInputController = new TextInputController()
+	textController: TextInputController = new TextInputController();
+	searchController: SearchController = new SearchController();
 
 	build() {
 		Scroll() {
@@ -75,7 +76,7 @@ struct TextInputPage {
 
 				Divider();
 
-				TextArea({placeholder: "请输入多行文本...", text: ""})
+				TextArea({ placeholder: "请输入多行文本...", text: "" })
 					.placeholderColor(Color.Green)
 					.placeholderFont({
 						size: 20,
@@ -84,9 +85,54 @@ struct TextInputPage {
 					.caretColor(Color.Red) // 光标颜色
 					.defaultFocus(true) // 是否自动获取焦点
 					.copyOption(CopyOptions.None) // 禁止复制 仅粘贴
-					// .height(40) // 设置高度后 内容区域滚动
+				// .height(40) // 设置高度后 内容区域滚动
 
 
+				Column() {
+					// Search({
+					// 	placeholder: "请输入搜索内容",
+					// 	value: "最灿烂的明天"
+					// })
+					// 	.width("90%")
+					// 	.defaultFocus(false)
+
+					Search({
+						placeholder: "请输入搜索内容",
+						value: "",
+						controller: this.searchController
+					})
+						.width("90%")
+						.searchButton("查询")
+						.placeholderColor(Color.Gray)
+						.placeholderFont({ size: 20, weight: 500 })
+						.backgroundColor("#eee")
+						.textFont({ size: 20, weight: 500 })
+						.copyOption(CopyOptions.InApp)
+						.onSubmit((val) => {
+							// 点击搜索图标或者按钮 回调
+							console.warn("--onSubmit--", val);
+						})
+						.onChange((val) => {
+							// 输入内容发生变化时 回调
+							console.warn("--onChange--", val);
+						})
+						.onCopy((val) => {
+							// 复制时 回调
+							console.warn("--onCopy--", val);
+						})
+						.onCut((val) => {
+							// 剪切时 回调
+							console.warn("--onCut--", val);
+						})
+						.onPaste((val) => {
+							// 粘贴时 回调
+							console.warn("--onPaste--", val);
+						})
+
+					Button("点击触发光标").onClick(() => {
+						this.searchController.caretPosition(2); //
+					});
+				}
 			}.justifyContent(FlexAlign.Start)
 			.width('100%')
 			.height('100%')
@@ -95,6 +141,6 @@ struct TextInputPage {
 		.width('100%')
 		.height('100%')
 		.padding({ left: 10, right: 10 })
-		.scrollBar(BarState.Auto)
+		.scrollBar(BarState.On)
 	}
 }
