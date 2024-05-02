@@ -1,4 +1,5 @@
 import router from '@ohos.router';
+
 @Entry
 @Component
 struct AppStoragePage {
@@ -117,6 +118,7 @@ struct storageLink {
 @Component
 struct persistentProp {
 	@StorageLink("idNo") idNo: number = 1;
+	@StorageLink("v1") v1: number = 1;
 	@State isShowTemp: string = "";
 	@State keyIndex: number = -1;
 
@@ -134,6 +136,12 @@ struct persistentProp {
 			.onClick(() => {
 				this.idNo++;
 				PersistentStorage.PersistProp<number>("idNo", this.idNo);
+				// PersistProps设置的多组的值,defaultValue需要使用@StorageLink或者@StorageProp进行定义
+				// @state定义的数据无法修改持久化缓存中的数据
+				PersistentStorage.PersistProps([
+					{ key: "v1", defaultValue: this.idNo },
+					{ key: "v2", defaultValue: "20" },
+				])
 
 				let keys = PersistentStorage.Keys();
 				let keyIndex = keys.indexOf("idNo");
@@ -152,7 +160,16 @@ struct persistentProp {
 				let keys = PersistentStorage.Keys();
 				let keyIndex = keys.indexOf("idNo");
 				this.keyIndex = keyIndex;
-				console.warn("--isShowTemp--", isShowTemp, "--key--", keys, "--index--", keyIndex);
+				this.v1 = AppStorage.Get<number>("v1");
+				let v2 = AppStorage.Get<string>("v2");
+				console.warn("--v1--", this.v1, "--v2--", v2);
+				if (!!this.v1) {
+					this.v1 += 1;
+					console.warn("--v1 set front--", this.v1);
+					PersistentStorage.PersistProp<number>("v1", this.v1);
+					console.warn("--v1 set back--", AppStorage.Get<number>("v1"));
+				}
+				console.warn("--isShowTemp--", isShowTemp, "--key--", keys, "--index--", keyIndex, "--v1--", this.v1, "--v2--", v2);
 			})
 
 			Button() {
