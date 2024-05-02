@@ -116,12 +116,13 @@ struct storageLink {
 
 @Component
 struct persistentProp {
-	@StorageLink("idNo") idNo:number = 1;
+	@StorageLink("idNo") idNo: number = 1;
 	@State isShowTemp: string = "";
+	@State keyIndex: number = -1;
 
 	build() {
 		Column() {
-			Text(`PersistentStorage.PersistProp idNo=${this.idNo}`)
+			Text(`PersistentStorage.PersistProp idNo=${this.idNo},是否永久缓存中=${this.keyIndex === -1 ? '否' : '是'},缓存中下标keyIndex=${this.keyIndex}`)
 				.fontSize(18)
 
 			Button() {
@@ -133,6 +134,10 @@ struct persistentProp {
 			.onClick(() => {
 				this.idNo++;
 				PersistentStorage.PersistProp<number>("idNo", this.idNo);
+
+				let keys = PersistentStorage.Keys();
+				let keyIndex = keys.indexOf("idNo");
+				this.keyIndex = keyIndex;
 			})
 
 			Button() {
@@ -144,6 +149,24 @@ struct persistentProp {
 			.onClick(() => {
 				let isShowTemp = AppStorage.Get<number>("idNo");
 				this.isShowTemp = isShowTemp.toString();
+				let keys = PersistentStorage.Keys();
+				let keyIndex = keys.indexOf("idNo");
+				this.keyIndex = keyIndex;
+				console.warn("--isShowTemp--", isShowTemp, "--key--", keys, "--index--", keyIndex);
+			})
+
+			Button() {
+				Text("删除数据绑定并打印缓存的值")
+					.fontSize(20)
+					.fontColor(Color.White)
+			}.padding({ top: 10, bottom: 10, left: 20, right: 20 })
+			.margin({ top: 20 })
+			.onClick(() => {
+				PersistentStorage.DeleteProp("idNo");
+				let keys = PersistentStorage.Keys();
+				let keyIndex = keys.indexOf("idNo");
+				this.keyIndex = keyIndex;
+				console.warn("--idNo--", this.idNo.toString());
 			})
 
 			Button() {
