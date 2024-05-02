@@ -1,34 +1,41 @@
 {
   "src": [
     "pages/Index",
+
     "pages/BoxComponent/ArrayPage",
-    "pages/OtherPage/LayoutPage",
-    "pages/OtherPage/LayoutWeight",
     "pages/BoxComponent/StackPage",
     "pages/BoxComponent/FlexPage",
-    "pages/demo/HotAndQuestion",
     "pages/BoxComponent/RelativeContainerPage",
-    "pages/demo/RelativePosition",
     "pages/BoxComponent/ListPage",
-    "pages/demo/WxListPage",
-    "pages/demo/ArticleListPage",
     "pages/BoxComponent/ListScrollerPage",
     "pages/BoxComponent/ListGroupPage",
     "pages/BoxComponent/GridPage",
     "pages/BoxComponent/TabsPage",
-    "pages/UIApi/RouterPage",
+
     "pages/BaseComponent/ImagePage",
     "pages/BoxComponent/SwiperPage",
     "pages/BaseComponent/TextInputPage",
     "pages/BaseComponent/FormPage",
     "pages/BaseComponent/DatePickerPage",
-    "pages/OtherPage/DataPage",
-    "pages/UIApi/PromptActionPage",
     "pages/BaseComponent/QrCodePage",
     "pages/BaseComponent/PatternLockPage",
     "pages/BaseComponent/TogglePage",
     "pages/BaseComponent/RatingPage",
+
+    "pages/OtherPage/DataPage",
+    "pages/OtherPage/LayoutPage",
+    "pages/OtherPage/LayoutWeight",
+
+    "pages/UIApi/RouterPage",
     "pages/UIApi/StatusPage",
-    "pages/UIApi/WatchPage"
+    "pages/UIApi/WatchPage",
+    "pages/UIApi/AppStoragePage",
+    "pages/UIApi/PromptActionPage",
+
+    "pages/demo/HotAndQuestion",
+    "pages/demo/RelativePosition",
+    "pages/demo/WxListPage",
+    "pages/demo/ArticleListPage"
+
   ]
 }
