@@ -35,7 +35,8 @@
     "pages/demo/HotAndQuestion",
     "pages/demo/RelativePosition",
     "pages/demo/WxListPage",
-    "pages/demo/ArticleListPage"
+    "pages/demo/ArticleListPage",
 
+    "pages/AnimationComponent/AnimationPage"
   ]
 }
