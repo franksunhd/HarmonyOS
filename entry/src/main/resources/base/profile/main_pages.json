@@ -1,7 +1,6 @@
 {
   "src": [
     "pages/Index",
-
     "pages/BoxComponent/ArrayPage",
     "pages/BoxComponent/StackPage",
     "pages/BoxComponent/FlexPage",
@@ -11,7 +10,6 @@
     "pages/BoxComponent/ListGroupPage",
     "pages/BoxComponent/GridPage",
     "pages/BoxComponent/TabsPage",
-
     "pages/BaseComponent/ImagePage",
     "pages/BoxComponent/SwiperPage",
     "pages/BaseComponent/TextInputPage",
@@ -21,22 +19,19 @@
     "pages/BaseComponent/PatternLockPage",
     "pages/BaseComponent/TogglePage",
     "pages/BaseComponent/RatingPage",
-
     "pages/OtherPage/DataPage",
     "pages/OtherPage/LayoutPage",
     "pages/OtherPage/LayoutWeight",
-
     "pages/UIApi/RouterPage",
     "pages/UIApi/StatusPage",
     "pages/UIApi/WatchPage",
     "pages/UIApi/AppStoragePage",
     "pages/UIApi/PromptActionPage",
-
     "pages/demo/HotAndQuestion",
     "pages/demo/RelativePosition",
     "pages/demo/WxListPage",
     "pages/demo/ArticleListPage",
-
-    "pages/AnimationComponent/AnimationPage"
+    "pages/AnimationComponent/AnimationPage",
+    "pages/AnimationComponent/TransitionPage"
   ]
 }
