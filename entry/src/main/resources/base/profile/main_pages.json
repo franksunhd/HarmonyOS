@@ -32,6 +32,7 @@
     "pages/demo/WxListPage",
     "pages/demo/ArticleListPage",
     "pages/AnimationComponent/AnimationPage",
-    "pages/AnimationComponent/TransitionPage"
+    "pages/AnimationComponent/TransitionPage",
+    "pages/AnimationComponent/SpringCurvePage"
   ]
 }
