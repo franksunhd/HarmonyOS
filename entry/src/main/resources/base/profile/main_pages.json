@@ -36,6 +36,7 @@
     "pages/AnimationComponent/TransitionPage",
     "pages/AnimationComponent/SpringCurvePage",
     "pages/AnimationComponent/SharedTransitionPage",
-    "pages/RequestComponent/HttpRequestPage"
+    "pages/RequestComponent/HttpRequestPage",
+    "pages/EventComponent/onClickPage"
   ]
 }
