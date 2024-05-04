@@ -31,8 +31,10 @@
     "pages/demo/RelativePosition",
     "pages/demo/WxListPage",
     "pages/demo/ArticleListPage",
+    "pages/demo/ImagePreviewPage",
     "pages/AnimationComponent/AnimationPage",
     "pages/AnimationComponent/TransitionPage",
-    "pages/AnimationComponent/SpringCurvePage"
+    "pages/AnimationComponent/SpringCurvePage",
+    "pages/AnimationComponent/SharedTransitionPage"
   ]
 }
