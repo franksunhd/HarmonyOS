@@ -39,6 +39,7 @@
     "pages/RequestComponent/HttpRequestPage",
     "pages/EventComponent/OnClickPage",
     "pages/EventComponent/OnTouchPage",
-    "pages/EventComponent/AppearPage"
+    "pages/EventComponent/AppearPage",
+    "pages/EventComponent/OnDragPage"
   ]
 }
